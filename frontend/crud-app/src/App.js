@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Button, Modal, Form } from 'react-bootstrap';
 import './App.css';  // Make sure to import your new CSS file
 
-const API_URL = 'http://127.0.0.1:5000/users';
+const API_URL = 'http://172.205.200.116:5000/users';
 
 function App() {
   const [users, setUsers] = useState([]);
