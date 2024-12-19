@@ -3,13 +3,13 @@ from flask_cors import CORS
 import mysql.connector
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # MySQL configuration
 db_config = {
-    'host': 'localhost',
-    'user': 'root',
-    'password': 'adminadmin',
+    'host': '72.145.132.113',
+    'user': 'milosz',
+    'password': 'haslo1234!@',
     'database': 'crud_app'
 }
 
@@ -66,4 +66,4 @@ def delete_user(id):
     return jsonify({'message': 'User deleted'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
